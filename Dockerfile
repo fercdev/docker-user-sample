@@ -8,7 +8,7 @@ COPY index.js package.json ./
 
 RUN npm ci --only=production || npm i --production
 
-RUN chwon -R appuser:appgroup /app
+RUN chown -R appuser:appgroup /app
 
 USER appuser
 
